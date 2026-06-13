@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+
+            bindings = <
+&trans  &kp Q  &kp W  &kp E  &kp R       &kp T            &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
+&trans  &kp A  &kp S  &kp D  &kp F       &kp G            &kp H      &kp J      &kp K      &kp L    &kp SEMI  &trans
+&trans  &kp Z  &kp X  &kp C  &kp V       &kp B            &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                      &mo 1  &kp ESCAPE  &kp BACKSPACE    &kp SPACE  &kp ENTER  &mo 2
+            >;
+        };
+
+        lower_layer {
+
+            bindings = <
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp N8  &kp N9  &kp N0        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp N7        &kp N8  &kp N9  &kp NUMBER_0  &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans  &trans  &trans        &trans
+                                    &trans        &trans        &trans          &kp TAB       &trans        &mo 3
+            >;
+        };
+
+        raise_layer {
+
+            bindings = <
+&trans  &kp EXCL    &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans  &kp ESCAPE  &trans  &trans    &trans    &trans        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
+&trans  &trans      &trans  &trans    &trans    &trans        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
+                            &mo 3     &trans    &kp DELETE    &trans     &trans     &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp SINGLE_QUOTE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp SLASH         &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
+};
